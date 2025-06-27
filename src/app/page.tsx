@@ -1,7 +1,7 @@
 export default function Home() {
   return (
       <div>
-        Storebrand
+        Storebrand <i className="bx bx-sun"></i>
       </div>
   )
  }
