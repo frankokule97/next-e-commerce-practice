@@ -1,8 +1,9 @@
 import Link from "next/link";
 
-export default async function ProductPage(props: { params: { productId: string } }) {
+export default async function ProductPage({ params }:  { params: Promise<{productId: string}> }) {
     const reviews = ['review1', 'review2', 'review3']
-    const { productId } = await props.params;
+    const resolvedParams = await params
+    const productId  = resolvedParams.productId
 
     return (
         <div>
